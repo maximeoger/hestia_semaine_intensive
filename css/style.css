@@ -235,8 +235,11 @@ body {
 }
 
 .presentation {
+  width: 100%;
   height: 100vh;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
 }
 
 .container {
@@ -244,19 +247,18 @@ body {
 }
 
 .textPresentationContainer {
-  float: left;
-  width: 50%;
-  height: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: auto;
+  width: 75%;
+  height: 100%;
 }
 
 .presentationTitle {
   font-size: 30px;
   font-family: "RajdhaniBold";
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   color: #253031;
 }
 
@@ -285,22 +287,28 @@ body {
 
 .ctaPresentation {}
 
-.imgPresentationContainer {
-  float: right;
+.presentationContainerLeft {
   width: 50%;
+  padding: 10% 0;
+}
+
+.presentationContainerRight {
+  width: 50%;
+}
+
+.presentationImgContainer {
   height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.imgPresentation {
-  width: 100%;
-}
+.imgPresentation {}
 
 .news {
-  clear: both;
   display: flex;
   width: 100%;
-  justify-content: center;
   background-color: #f2efea;
   min-height: 100vh;
 }
@@ -309,10 +317,9 @@ body {
   width: 50%;
   background: url('../img/nasa.png') rgba(255, 255, 255, 1);
   background-size: cover;
-  box-sizing: border-box;
   /*align-self: center;*/
   /*height: 100%;*/
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .newsContainer {
@@ -387,7 +394,7 @@ body {
 
 .actualites {
   width: 50%;
-  padding: 50px 0;
+  padding: 100px 0;
   /*height: 100%;*/
 }
 
@@ -639,7 +646,7 @@ body {
   border-radius: 50%;
   padding: 5px;
   background-color: #253031;
-  left: 40px;
+  left: 2.5%;
   transition: background-color 0.5s ease;
 }
 
@@ -726,6 +733,39 @@ body {
 /*MEDIA QUERIES FOR TABLET */
 
 @media (max-width: 768px) {
+  .listContainer {
+    display: none;
+  }
+  .presentation {
+    height: auto;
+    background: url('../img/aerial.png');
+    background-size: cover;
+  }
+  .presentationContainerLeft {
+    width: 100%;
+
+  }
+  .presentationContainerRight {
+    display: none;
+  }
+
+.presentationTitle, .meteoTitle, .actuTitle{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+  .dash {
+    display: block;
+    align-self: center;
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
+  .textPresentationContainer {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 3%;
+  }
   .meteo, .actualites {
     padding: 30px 0;
   }
@@ -733,13 +773,21 @@ body {
     width: 90%;
     /*background: rgba(0, 255, 0, 0.1);*/
   }
+.presentationEthymologie, .presentationText {
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+  .ctaPresentation, .ctaNews, .ctaActu {
+    align-self: center;
+  }
   .news {
     flex-direction: column;
   }
   .meteo {
     width: 100%;
   }
-  .meteoTitle, .actuTitle{
+  .meteoTitle, .actuTitle {
     margin-bottom: 20px;
   }
   .meteoLast {
@@ -754,7 +802,7 @@ body {
     width: 100%;
   }
   .article {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .ascenseurItem {
     display: none;
