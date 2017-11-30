@@ -474,10 +474,15 @@ body {
 }
 
 .lifestyle {
+  background-color: #ffffff;
+}
+
+.lifeStyleBigContainer {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin: auto;
   justify-content: space-between;
-  background-color: #ffffff;
 }
 
 .lifestyleTitle {
@@ -496,7 +501,7 @@ body {
 
 .lifestyleText {
   align-self: center;
-  width: 752px;
+  width: 90%;
   font-family: 'RajdhaniRegular';
   line-height: 1.67;
   text-align: center;
@@ -504,7 +509,7 @@ body {
   margin-bottom: 120px;
 }
 
-.lifestyleContainer {
+.lifeStyleContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -512,6 +517,7 @@ body {
 }
 
 .lifeStyleContainer2 {
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -519,13 +525,13 @@ body {
 .lifestyleImgContainer {}
 
 .lifestyleImg {
-  width: 440px;
+  width: 100%;
 }
 
 .lifestyleArticleTextContainer {
   margin-top: 50px;
   align-self: center;
-  width: 440px;
+  width: 95%;
 }
 
 .lifestyleArticleBold {
@@ -589,16 +595,20 @@ body {
 }
 
 .footerContainer {
-  width: 920px;
-  margin-left: 290px;
+  transform: translateX(20px);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
 }
 
 .footerListContainer {
-  width: 305px;
   line-height: 36px;
+  margin-bottom: 20px;
+  width:220px;
+  flex-grow: 1;
 }
 
 .footerListItem {
@@ -692,11 +702,7 @@ body {
 
 /*MEDIA QUERIES FOR DESKTOP-LARGE */
 
-@media (min-width: 1920px) {
-  .newsContainer {
-    width: 80%;
-  }
-}
+@media (min-width: 1920px) {}
 
 /*MEDIA QUERIES FOR DESKTOP */
 
@@ -728,6 +734,9 @@ body {
   .articleInfo {
     width: 100%;
   }
+  .lifeStyleBigContainer {
+    width: 85%;
+  }
 }
 
 /*MEDIA QUERIES FOR TABLET */
@@ -743,19 +752,16 @@ body {
   }
   .presentationContainerLeft {
     width: 100%;
-
   }
   .presentationContainerRight {
     display: none;
   }
-
-.presentationTitle, .meteoTitle, .actuTitle{
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-
+  .presentationTitle, .meteoTitle, .actuTitle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
   .dash {
     display: block;
     align-self: center;
@@ -764,7 +770,7 @@ body {
   }
   .textPresentationContainer {
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 3%;
+    width: 90%;
   }
   .meteo, .actualites {
     padding: 30px 0;
@@ -773,11 +779,10 @@ body {
     width: 90%;
     /*background: rgba(0, 255, 0, 0.1);*/
   }
-.presentationEthymologie, .presentationText {
-  padding-left:10px;
-  padding-right: 10px;
-}
-
+  .presentationEthymologie, .presentationText {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .ctaPresentation, .ctaNews, .ctaActu {
     align-self: center;
   }
@@ -807,12 +812,34 @@ body {
   .ascenseurItem {
     display: none;
   }
+  .lifeStyleBigContainer {
+    width: 95%;
+  }
+  .lifeStyleContainer {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .lifeStyleContainer2 {
+    width: 90%;
+    align-self: center;
+    margin-bottom: 40px;
+  }
 }
 
 /*MEDIA QUERIES FOR MOBILE */
 
 @media (max-width: 480px) {
+  .textPresentationContainer {
+    width: 95%;
+  }
   .newsContainer {
     width: 95%;
   }
+  .lifeStyleBigContainer {
+    width: 95%;
+  }
+  .lifeStyleContainer2 {
+    width: 95%;
+  }
+
 }
