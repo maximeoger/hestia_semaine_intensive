@@ -1,0 +1,905 @@
+@font-face {
+  font-family: "RajdhaniRegular";
+  src: url('../font/Rajdhani-Regular.ttf');
+}
+
+@font-face {
+  font-family: "RajdhaniMedium";
+  src: url('../font/Rajdhani-Medium.ttf');
+}
+
+@font-face {
+  font-family: "RajdhaniSemiBold";
+  src: url("../font/Rajdhani-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "RajdhaniBold";
+  src: url("../font/Rajdhani-Bold.ttf");
+}
+
+@font-face {
+  font-family: "RajdhaniLight";
+  src: url("../font/Rajdhani-Light.ttf");
+}
+
+@font-face {
+  font-family: "PlayFairDisplayRegular";
+  src: url('../font/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+  font-family: "PlayFairDisplayItalic";
+  src: url('../font/PlayfairDisplay-Italic.ttf');
+}
+
+body {
+  font-family: "RajdhaniSemiBold";
+  background-color: #ffffff;
+  font-size: 18px;
+}
+
+.pictoContainer {
+  position: absolute;
+  right: 145px;
+  bottom: 60px;
+}
+
+.pictoImg {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.strong {
+  font-family: "RajdhaniBold";
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.logoContainer {
+  width: 72px;
+  height: 20px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.listContainer {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listItem {
+  height: 25px;
+  transition: all ease-out 0.2s;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+.listLink {
+  display: block;
+  padding-top: 11px;
+  transition: all ease-out 0.2s;
+}
+
+.listLink:hover {
+  color: #39B590;
+}
+
+.listItem:hover>.miniDash {
+  opacity: 1;
+}
+
+.miniDash {
+  opacity: 0;
+  margin-top: 6px;
+  width: 35px;
+  height: 4px;
+  background: #39B590;
+  margin: 5px auto;
+}
+
+.langage {
+  width: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all ease-out 0.4s;
+}
+
+.lang {
+  overflow: hidden;
+  height: 20px;
+  line-height: 20px;
+  padding-top: 11px;
+  font-size: 12px;
+  transition: all ease-out 0.4s;
+}
+
+.langage:hover>.lang {
+  overflow: visible;
+  transition: all ease-out 0.4s;
+}
+
+.langage:hover>.arrowContainer {
+  transform: rotate(540deg);
+  transition: all ease-out 0.4s;
+}
+
+.arrowContainer {}
+
+.langArrow {
+  margin-top: 14px;
+}
+
+.hiddenLang {
+  color: grey;
+}
+
+.fixedBg {
+  background: url('../img/background2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  z-index: -100;
+  width: 100%;
+  height: 100vh;
+}
+
+.first {
+  position: relative;
+  height: 100vh;
+  z-index: 0;
+}
+
+.firstContainer {
+  padding: 0 130px;
+  height: 100%;
+}
+
+.firstInfo {
+  width: 355px;
+  height: 260px;
+  margin: 130px auto;
+  margin-top: calc(50vh - 130px);
+  position: relative;
+}
+
+.nameInfo {
+  font-size: 70px;
+  font-family: 'RajdhaniBold';
+  line-height: 0.7;
+  margin-bottom: 40px;
+  color: #253031;
+  width: 200px;
+}
+
+.textInfo {
+  font-size: 13px;
+  font-family: "RajdhaniMedium";
+  right: 0;
+  color: #253031;
+  line-height: 18px;
+  width: 250px;
+  position: absolute;
+}
+
+.ctaFirst {
+  position: absolute !important;
+  bottom: 0;
+  left: 104px;
+}
+
+.calltoAction {
+  width: 160px;
+  height: 42px;
+  overflow: visible;
+  position: relative;
+  display: flex;
+}
+
+.circle {
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
+  border: solid 6px #39B590;
+  transition: all ease-in-out 0.2s;
+}
+
+.point {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #253031;
+  left: 17px;
+  top: 17px;
+  position: absolute;
+}
+
+.linkName {
+  position: absolute;
+  left: 70px;
+  top: 14px;
+  transition: all ease-in-out 0.2s;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.calltoAction:hover>.circle {
+  width: 33px;
+  height: 33px;
+  transform: translate(-3px, -3px);
+}
+
+.calltoAction:hover>.linkName {
+  color: #253031;
+  transform: translateX(8px);
+}
+
+.presentation {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  padding: 0 130px;
+}
+
+.textPresentationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 75%;
+  height: 100%;
+}
+
+.presentationTitle {
+  font-size: 30px;
+  font-family: "RajdhaniBold";
+  margin-bottom: 50px;
+  color: #253031;
+}
+
+.dash {
+  height: 4px;
+  width: 52px;
+  background: #51CACE;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 50px;
+}
+
+.presentationEthymologie {
+  font-family: "PlayFairDisplayItalic";
+  color: #838383;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.presentationText {
+  font-family: "RajdhaniRegular";
+  line-height: 18px;
+  margin-bottom: 54px;
+  font-size: 13px;
+}
+
+.ctaPresentation {}
+
+.presentationContainerLeft {
+  width: 50%;
+  padding: 10% 0;
+}
+
+.presentationContainerRight {
+  width: 50%;
+}
+
+.presentationImgContainer {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imgPresentation {}
+
+.news {
+  display: flex;
+  width: 100%;
+  background-color: #f2efea;
+  min-height: 100vh;
+}
+
+.meteo {
+  width: 50%;
+  background: url('../img/nasa.png') rgba(255, 255, 255, 1);
+  background-size: cover;
+  /*align-self: center;*/
+  /*height: 100%;*/
+  padding: 100px 0;
+}
+
+.newsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  /*background: rgba(255, 0, 0, 0.1);*/
+  width: 75%;
+  height: 100%;
+}
+
+.meteoTitle {
+  font-size: 30px;
+  font-family: "RajdhaniBold";
+  color: #253031;
+}
+
+.meteoText {
+  line-height: 18px;
+  font-size: 13px;
+  color: #253031;
+  font-family: "RajdhaniMedium";
+}
+
+.meteoLast {
+  /*margin: 30px 0;*/
+}
+
+.meteoInfoContainer {
+  width: 100%;
+  height: 25%;
+  background: rgba(255, 255, 255, 0.5);
+  /*margin-bottom: 30px;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.meteoImgContainer {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+}
+
+.meteoIcon {}
+
+.degre {
+  text-align: center;
+  font-size: 35px;
+  font-family: "RajdhaniMedium";
+  width: 100%;
+  margin-top: 20px;
+}
+
+.meteoInfoText {
+  align-self: center;
+  max-width: 50%;
+  padding: 10%;
+  float: right;
+  font-family: "RajdhaniMedium";
+  font-size: 13px;
+  line-height: 18px;
+  line-height: 1.3;
+  color: #253031;
+}
+
+.ctaNews {
+  /*margin-bottom: 40px;*/
+}
+
+.actualites {
+  width: 50%;
+  padding: 100px 0;
+  /*height: 100%;*/
+}
+
+.actuTitle {
+  font-size: 30px;
+  font-family: "RajdhaniBold";
+  margin-bottom: 50px;
+  /*margin-top: 50px;
+  margin-bottom: 44px;*/
+  color: #253031;
+}
+
+.articleCategory {
+  font-family: "RajdhaniSemiBold";
+  font-size: 15px;
+  color: #253031;
+  padding-bottom: 17px;
+}
+
+.date {
+  color: #39B590;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.articleContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.articleThumb {
+  width: 40%;
+  height: auto;
+}
+
+.articleInfo {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*margin-left: 20px;*/
+}
+
+/*.middle {
+  margin: 67px 0;
+}*/
+
+.articleTitle {
+  font-family: "RajdhaniSemiBold";
+  font-size: 15px;
+  color: #253031;
+}
+
+.articleDesc {
+  font-family: "RajdhaniRegular";
+  font-size: 12px;
+  /*margin-top: 17px;*/
+  line-height: 18px;
+}
+
+.articleLink {
+  display: block;
+  font-family: "RajdhaniBold";
+  font-size: 12px;
+  color: #39B590;
+  bottom: 0px;
+}
+
+.ctaActu {
+  /*margin-top: 25px;*/
+}
+
+.lifestyle {
+  background-color: #ffffff;
+}
+
+.lifeStyleBigContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.lifestyleTitle {
+  font-size: 60px;
+  font-family: "RajdhaniBold";
+  margin: 77px 0 43px 0;
+  text-align: center;
+}
+
+.lifestyleLine {
+  width: 60px;
+  align-self: center;
+  border-top: 5px solid #51cace;
+  margin-bottom: 47px;
+}
+
+.lifestyleText {
+  align-self: center;
+  width: 90%;
+  font-family: 'RajdhaniRegular';
+  line-height: 1.67;
+  text-align: center;
+  color: #253031;
+  margin-bottom: 120px;
+}
+
+.lifeStyleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.lifeStyleContainer2 {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.lifestyleImgContainer {}
+
+.lifestyleImg {
+  width: 100%;
+}
+
+.lifestyleArticleTextContainer {
+  margin-top: 50px;
+  align-self: center;
+  width: 95%;
+}
+
+.lifestyleArticleBold {
+  font-size: 20px;
+  font-family: "RajdhaniBold";
+  color: ##253031;
+}
+
+.lifestyleArticleText {
+  font-family: "RajdhaniMedium";
+  margin-top: 30px;
+  line-height: 24px;
+  color: ##253031;
+}
+
+.reservation {
+  background: url('../img/bg_section5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  height: 100vh;
+}
+
+.reservationTitle {
+  align-self: center;
+  text-align: center;
+  font-size: 30px;
+  font-family: "RajdhaniBold";
+  color: #ffffff;
+  width: 482px;
+  margin-top: 120px;
+}
+
+.reservationLine {
+  width: 60px;
+  border-top: 5px solid #ffffff;
+  text-align: center;
+  margin-left: calc(50% - 30px);
+  margin-top: 50px;
+}
+
+.reservationText {
+  margin-top: 43px;
+  text-align: center;
+  font-family: "RajdhaniMedium";
+  font-size: 15px;
+}
+
+.textBeforeSponsors {
+  margin-top: 130px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #535758;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.footerContainer {
+  transform: translateX(20px);
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
+}
+
+.footerListContainer {
+  line-height: 36px;
+  margin-bottom: 20px;
+  width: 220px;
+  flex-grow: 1;
+}
+
+.footerListItem {
+  font-family: "RajdhaniRegular";
+  color: #ffffff;
+}
+
+.credit {
+  color: #ffffff;
+  margin-top: 180px;
+  text-align: center;
+  font-family: "RajdhaniRegular";
+}
+
+.names {
+  text-decoration: underline;
+  font-family: "RajdhaniSemiBold";
+  cursor: pointer;
+}
+
+.sponsorsImgContainer {
+  width: 1038px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-left: calc(50% - 519px);
+}
+
+.ctaResa {
+  margin-left: calc(50% - 115px);
+  margin-top: 90px;
+}
+
+.ctaResa>.point {
+  background: #fff;
+}
+
+.ctaResa:hover>.linkName {
+  color: #fff;
+}
+
+.ascenseurItem {
+  position: fixed;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #253031;
+  left: 2.5%;
+  transition: background-color 0.5s ease;
+}
+
+.pointAccueil {
+  top: 35vh;
+}
+
+.pointPresentation {
+  top: 40vh;
+}
+
+.pointNews {
+  top: 45vh;
+}
+
+.pointLifestyle {
+  top: 50vh;
+}
+
+.pointReservation {
+  top: 55vh;
+}
+
+.first:hover .pointAccueil {
+  background-color: #39b590;
+}
+
+.presentation:hover .pointPresentation {
+  background-color: #39b590;
+}
+
+.news:hover .pointNews {
+  background-color: #39b590;
+}
+
+.lifestyle:hover .pointLifestyle {
+  background-color: #39b590;
+}
+
+.reservation:hover .pointReservation {
+  background-color: #39b590;
+}
+
+/*MEDIA QUERIES FOR DESKTOP-LARGE */
+
+@media (min-width: 1920px) {}
+
+/*MEDIA QUERIES FOR DESKTOP */
+
+@media (max-width: 1366px) {
+  .newsContainer {
+    /*background: rgba(0, 0, 255, 0.1);*/
+  }
+  .meteoInfoContainer {
+    height: 30%;
+    flex-direction: column;
+  }
+  .meteoInfoText {
+    font-size: 15px;
+  }
+  .articleThumb {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  .articleContent {
+    flex-direction: column;
+    justify-content: center;
+    width: 100;
+    margin: auto;
+  }
+  .articleDesc {
+    margin: 5px 0;
+  }
+  .articleInfo {
+    width: 100%;
+  }
+  .lifeStyleBigContainer {
+    width: 85%;
+  }
+}
+
+/*MEDIA QUERIES FOR TABLET */
+
+@media (max-width: 768px) {
+  .firstContainer {
+    padding: 0 30px;
+  }
+  .first {
+    width: 100%;
+  }
+  .listContainer {
+    display: none;
+  }
+  .presentation {
+    height: auto;
+    background: url('../img/aerial.png');
+    background-size: cover;
+  }
+  .presentationContainerLeft {
+    width: 100%;
+  }
+  .presentationContainerRight {
+    display: none;
+  }
+  .presentationTitle, .meteoTitle, .actuTitle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .dash {
+    display: block;
+    align-self: center;
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
+  .textPresentationContainer {
+    background: rgba(255, 255, 255, 0.8);
+    width: 90%;
+  }
+  .meteo, .actualites {
+    padding: 30px 0;
+  }
+  .newsContainer {
+    width: 90%;
+    /*background: rgba(0, 255, 0, 0.1);*/
+  }
+  .presentationEthymologie, .presentationText {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .ctaPresentation, .ctaNews, .ctaActu {
+    align-self: center;
+  }
+  .news {
+    flex-direction: column;
+  }
+  .meteo {
+    width: 100%;
+  }
+  .meteoTitle, .actuTitle {
+    margin-bottom: 20px;
+  }
+  .meteoLast {
+    margin: 20px 0;
+  }
+  .meteoInfoContainer {
+    height: 30%;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .actualites {
+    width: 100%;
+  }
+  .article {
+    margin-bottom: 40px;
+  }
+  .ascenseurItem {
+    display: none;
+  }
+  .lifeStyleBigContainer {
+    width: 95%;
+  }
+  .lifeStyleContainer {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .lifeStyleContainer2 {
+    width: 90%;
+    align-self: center;
+    margin-bottom: 40px;
+  }
+  .pictoContainer {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+/*MEDIA QUERIES FOR MOBILE */
+
+@media (max-width: 480px) {
+  .textPresentationContainer {
+    width: 95%;
+  }
+  .newsContainer {
+    width: 95%;
+  }
+  .lifeStyleBigContainer {
+    width: 95%;
+  }
+  .lifeStyleContainer2 {
+    width: 95%;
+  }
+  .fixedBg {}
+  .firstInfo {
+    width: 100%;
+    height: 260px;
+    margin: 130px auto;
+    margin-top: calc(50vh - 130px);
+    position: relative;
+  }
+  .nameInfo {
+    font-size: 60px;
+    font-family: 'RajdhaniBold';
+    line-height: 0.7;
+    margin-bottom: 40px;
+    color: #253031;
+    width: 200px;
+    margin-left: calc(50% - 100px);
+  }
+  .textInfo {
+    font-size: 13px;
+    font-family: "RajdhaniMedium";
+    right: 0;
+    color: #253031;
+    line-height: 18px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+  }
+  .ctaFirst {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 80px);
+  }
+  .pictoContainer {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+}
