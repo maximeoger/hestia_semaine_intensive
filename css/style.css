@@ -559,6 +559,7 @@ body {
   line-height: 24px;
   color: ##253031;
 }
+
 .reservation {
   background: url('../img/bg_section5.jpg');
   background-size: cover;
@@ -575,7 +576,6 @@ body {
   font-size: 30px;
   font-family: "RajdhaniBold";
   color: #ffffff;
-  width: 482px;
   margin-top: 120px;
 }
 
@@ -613,6 +613,7 @@ body {
 .sponsorsImgContainer>img {
   margin: 0 50px;
 }
+
 .ctaResa {
   margin-left: calc(50% - 115px);
   margin-top: 90px;
@@ -667,8 +668,6 @@ body {
   font-family: "RajdhaniSemiBold";
   cursor: pointer;
 }
-
-
 
 .ascenseurItem {
   position: fixed;
@@ -755,6 +754,12 @@ body {
   }
   .lifeStyleBigContainer {
     width: 85%;
+  }
+  .sponsorsImgContainer {
+    width: 90%;
+  }
+  .reservation {
+    height: auto;
   }
 }
 
@@ -869,7 +874,7 @@ body {
     width: 95%;
   }
   .lifeStyleContainer2 {
-    width: 95%;
+    width: 100%;
   }
   .fixedBg {}
   .firstInfo {
@@ -907,5 +912,11 @@ body {
     position: absolute;
     right: 30px;
     bottom: 30px;
+  }
+  .footerContainer {
+    transform: translateX(0px);
+  }
+  .footerListContainer {
+    width: 95%;
   }
 }
