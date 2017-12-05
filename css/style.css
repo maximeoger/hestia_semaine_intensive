@@ -166,7 +166,7 @@ body {
 }
 
 .firstContainer {
-  padding: 0 130px;
+  padding: 0 100px;
   height: 100%;
 }
 
@@ -609,7 +609,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 60px;
-  /*margin-left: calc(50% - 519px);*/
 }
 
 .sponsorsImgContainer>img {
@@ -619,6 +618,7 @@ body {
 .ctaResa {
   margin-left: calc(50% - 115px);
   margin-top: 90px;
+  margin-bottom: 100px;
 }
 
 .ctaResa>.point {
@@ -659,11 +659,13 @@ body {
 }
 
 .credit {
+  margin: 0 20px;
   color: #ffffff;
   margin-top: 180px;
   text-align: center;
   font-family: "RajdhaniRegular";
-  line-height: 31px;
+
+  line-height: 25px;
 }
 
 .names {
@@ -764,6 +766,9 @@ body {
   .reservation {
     height: auto;
   }
+  .credit {
+    margin-top: 100px;
+  }
 }
 
 /*** MEDIA QUERIES FOR TABLET ***/
@@ -848,7 +853,7 @@ body {
     display: none;
   }
   .firstContainer {
-    padding: 0 30px;
+    padding: 0 25px;
   }
   .first {
     width: 100%;
@@ -869,6 +874,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+    margin-top: 20px;
   }
   .dash {
     display: block;
@@ -879,6 +885,9 @@ body {
   .textPresentationContainer {
     background: rgba(255, 255, 255, 0.8);
     width: 90%;
+  }
+  .ctaPresentation {
+    margin-bottom: 20px;
   }
   .meteo, .actualites {
     padding: 30px 0;
@@ -917,8 +926,17 @@ body {
   .article {
     margin-bottom: 40px;
   }
+  .articleContent {
+    width: 90%;
+  }
   .ascenseurItem {
     display: none;
+  }
+  .lifestyleTitle {
+    margin-top: 40px;
+  }
+  .lifestyleText {
+    margin-bottom: 50px;
   }
   .lifeStyleBigContainer {
     width: 95%;
@@ -930,7 +948,13 @@ body {
   .lifeStyleContainer2 {
     width: 90%;
     align-self: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+  }
+  .lifestyleArticleTextContainer {
+    margin-top: 20px;
+  }
+  .lifestyleArticleText {
+    margin-top: 20px;
   }
   .pictoContainer {
     position: absolute;
@@ -940,6 +964,15 @@ body {
   .white {
     background-color: #fff !important;
   }
+
+  .footer {
+    padding-top: 50px;
+  }
+  .credit {
+    margin-top: 50px;
+  }
+
+
   .is-active {
     width: 100%;
     height: 100vh;
@@ -964,11 +997,17 @@ body {
 /*MEDIA QUERIES FOR MOBILE */
 
 @media (max-width: 480px) {
+  .firstContainer {
+    padding: 0 20px;
+  }
   .textPresentationContainer {
     width: 95%;
   }
   .newsContainer {
     width: 95%;
+  }
+  .articleContent {
+    width: 100%;
   }
   .lifeStyleBigContainer {
     width: 95%;
