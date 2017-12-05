@@ -14,8 +14,69 @@
 
   <div class="fixedBg"></div>
 
-  <section class="first" id="ascenseurAccueil">
+  <header class="header">
 
+    <div class="logoContainer">
+      <a href="#">
+        <img class="logo" src="img/hestia.png" alt="logo">
+      </a>
+    </div>
+
+    <ul class="listContainer" id="jsList">
+      <li class="listItem">
+        <a href="#" class="listLink">présentation</a>
+        <div class="miniDash"></div>
+      </li>
+      <li class="listItem">
+        <a href="#" class="listLink">actualités</a>
+        <div class="miniDash"></div>
+      </li>
+      <li class="listItem">
+        <a href="#" class="listLink">météo</a>
+        <div class="miniDash"></div>
+      </li>
+      <li class="listItem">
+        <a href="#" class="listLink">vivre à Hestia</a>
+        <div class="miniDash"></div>
+      </li>
+      <li class="listItem">
+        <a href="#" class="listLink">planifier</a>
+        <div class="miniDash"></div>
+      </li>
+      <li class="listItem">
+        <a href="#" class="listLink">contact</a>
+        <div class="miniDash"></div>
+      </li>
+    </ul>
+
+    <div class="langage">
+      <div class="lang">
+        <p class="fr">FR</p>
+        <a href="#">
+          <p class="hiddenLang">En</p>
+        </a>
+        <a href="#">
+          <p class="hiddenLang">Es</p>
+        </a>
+        <a href="#">
+          <p class="hiddenLang">It</p>
+        </a>
+
+      </div>
+
+      <div class="arrowContainer">
+        <img src="img/fleche.png" alt="flèche" class="langArrow">
+      </div>
+    </div>
+
+    <span class="headerBurger burger-menu" id="jsBurger">
+    <div class="burger"></div>
+  </span>
+
+
+  </header>
+
+  <section class="first" id="ascenseurAccueil">
     <div class="firstContainer">
 
       <div class="pictoContainer">
@@ -26,63 +87,7 @@
 
       <a href="#ascenseurAccueil" class="ascenseurItem pointAccueil js-scrollTo"></a>
 
-      <header class="header">
 
-        <div class="logoContainer">
-          <a href="#">
-            <img class="logo" src="img/hestia.png" alt="logo">
-          </a>
-        </div>
-
-        <ul class="listContainer">
-          <li class="listItem">
-            <a href="#" class="listLink">présentation</a>
-            <div class="miniDash"></div>
-          </li>
-          <li class="listItem">
-            <a href="#" class="listLink">actualités</a>
-            <div class="miniDash"></div>
-          </li>
-          <li class="listItem">
-            <a href="#" class="listLink">météo</a>
-            <div class="miniDash"></div>
-          </li>
-          <li class="listItem">
-            <a href="#" class="listLink">vivre à Hestia</a>
-            <div class="miniDash"></div>
-          </li>
-          <li class="listItem">
-            <a href="#" class="listLink">planifier</a>
-            <div class="miniDash"></div>
-          </li>
-          <li class="listItem">
-            <a href="#" class="listLink">contact</a>
-            <div class="miniDash"></div>
-          </li>
-        </ul>
-
-        <div class="langage">
-          <div class="lang">
-            <p class="fr">FR</p>
-            <a href="#">
-              <p class="hiddenLang">En</p>
-            </a>
-            <a href="#">
-              <p class="hiddenLang">Es</p>
-            </a>
-            <a href="#">
-              <p class="hiddenLang">It</p>
-            </a>
-
-          </div>
-          <div class="arrowContainer">
-            <img src="img/fleche.png" alt="flèche" class="langArrow">
-
-          </div>
-        </div>
-
-
-      </header>
 
       <div class="firstInfo">
         <h1 class="nameInfo">HES <br> &nbsp; &nbsp; &nbsp; TIA</h1>
@@ -338,6 +343,14 @@
         scrollTop: $(page).offset().top
       }, speed); // Go
       return false;
+    });
+
+    var $burger = document.querySelector('#jsBurger');
+    var $list = document.querySelector('#jsList');
+
+    $burger.addEventListener('click', function() {
+      this.classList.toggle('menu-on');
+      $list.classList.toggle('is-active');
     });
   });
 </script>
