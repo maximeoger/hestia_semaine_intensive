@@ -67,7 +67,7 @@ body {
   width: 72px;
   height: 20px;
   margin-left: 30px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .logo {
@@ -79,6 +79,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .listItem {
@@ -112,6 +113,8 @@ body {
 }
 
 .langage {
+  margin-top: 15px;
+  margin-right: 30px;
   width: 40px;
   display: flex;
   flex-direction: row;
@@ -161,24 +164,26 @@ body {
 
 .first {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 40px);
   z-index: 0;
 }
 
 .firstContainer {
   padding: 0 100px;
-  height: 100%;
+  padding-top: calc(50vh - 150px);
+  /*height: 100%;*/
 }
 
 .firstInfo {
   width: 355px;
   height: 260px;
-  margin: 130px auto;
-  margin-top: calc(50vh - 130px);
+  margin: 0 auto;
+  /*margin-top: calc(50vh - 130px);*/
   position: relative;
 }
 
 .nameInfo {
+  margin-left: 70px;
   font-size: 70px;
   font-family: 'RajdhaniBold';
   line-height: 0.7;
@@ -255,6 +260,7 @@ body {
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
+  z-index:50;
 }
 
 .container {
@@ -787,7 +793,7 @@ body {
   height: 20px;
   cursor: pointer;
   margin-right: 30px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .burger {
@@ -820,7 +826,6 @@ body {
   content: "";
   display: block;
 }
-
 .burger::after, .burger::before, .burger {
   transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
@@ -841,6 +846,12 @@ body {
 .burger-menu.menu-on .burger {
   background: rgba(111, 111, 111, .0);
 }
+.burger-menu.menu-on .burger:before {
+  background: #fff;
+}
+.burger-menu.menu-on .burger:after {
+  background: #fff;
+}
 
 @media (max-width: 768px) {
   .langage {
@@ -854,6 +865,8 @@ body {
   }
   .firstContainer {
     padding: 0 25px;
+    padding-top: calc(50vh - 145px);
+
   }
   .first {
     width: 100%;
@@ -913,12 +926,12 @@ body {
     margin-bottom: 20px;
   }
   .meteoLast {
-    margin: 20px 0;
+    margin: 30px 0;
   }
   .meteoInfoContainer {
-    height: 30%;
+    height: 240px;
     flex-direction: row;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .actualites {
     width: 100%;
@@ -971,9 +984,18 @@ body {
   .credit {
     margin-top: 50px;
   }
-
+.reservationTitle {
+  margin-top: 70px;
+}
+.textBeforeSponsors {
+  margin-top: 70px;
+  }
+  .sponsorsImgContainer {
+    margin-top: 20px;
+  }
 
   .is-active {
+    margin-top: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
@@ -999,6 +1021,8 @@ body {
 @media (max-width: 480px) {
   .firstContainer {
     padding: 0 20px;
+    padding-top: calc(50vh - 150px);
+    padding-bottom: calc(-50vh + 150px)
   }
   .textPresentationContainer {
     width: 95%;
@@ -1019,8 +1043,8 @@ body {
   .firstInfo {
     width: 100%;
     height: 260px;
-    margin: 130px auto;
-    margin-top: calc(50vh - 130px);
+    /*margin: 130px auto;*/
+    /*margin-top: calc(50vh - 130px);*/
     position: relative;
   }
   .nameInfo {
